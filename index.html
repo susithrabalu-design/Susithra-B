@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Susithra B | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+}
+
+/* Background Glow */
+body::before{
+    content:'';
+    position:fixed;
+    width:800px;
+    height:800px;
+    background:radial-gradient(circle,
+    rgba(85,120,255,0.25) 0%,
+    rgba(140,80,255,0.15) 30%,
+    transparent 70%);
+    top:-150px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:-1;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#7d7dff;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#8b6fff;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 10%;
+}
+
+.hero h1{
+    font-size:75px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,#5b8cff,#a855f7);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#cfcfcf;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    margin:10px;
+    transition:0.3s;
+}
+
+.primary{
+    background:white;
+    color:black;
+}
+
+.secondary{
+    border:1px solid #555;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Sections */
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.section-title::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:linear-gradient(90deg,#5b8cff,#a855f7);
+    margin-top:10px;
+}
+
+/* Cards */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #222;
+    padding:25px;
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.card:hover{
+    border-color:#7d7dff;
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#8b6fff;
+}
+
+.card p{
+    color:#d1d1d1;
+    line-height:1.7;
+}
+
+/* About Stats */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.stat{
+    background:#111;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.stat h2{
+    color:#8b6fff;
+    font-size:35px;
+}
+
+.stat p{
+    color:#ccc;
+}
+
+/* Skills */
+.skill-list{
+    list-style:none;
+}
+
+.skill-list li{
+    margin:10px 0;
+    color:#ddd;
+}
+
+/* Contact */
+.contact-box{
+    text-align:center;
+}
+
+.contact-box a{
+    color:#8b6fff;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #222;
+    color:#888;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Susithra<span>.</span></div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+    <h1>Hi, I'm <br><span>Susithra B</span></h1>
+
+    <p>
+        Cybersecurity Enthusiast • Cybersecurity ML Model Developer Trainee • Information Technology Student
+    </p>
+
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="#" class="btn secondary">Download Resume</a>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p style="color:#d1d1d1;line-height:1.8;font-size:18px;">
+I am a B.Tech Information Technology student passionate about Cybersecurity,
+Machine Learning, and Web Development. I completed a Cyber Security Internship
+at Oasis Infobyte where I gained practical knowledge in vulnerability assessment,
+network security, risk analysis, and patch management.
+
+Currently, I am undergoing training as a Cybersecurity ML Model Developer,
+exploring how Machine Learning can be used for threat detection, cyber analytics,
+and intelligent security systems.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h2>4+</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h2>5+</h2>
+<p>Certifications</p>
+</div>
+
+<div class="stat">
+<h2>1</h2>
+<p>Internship</p>
+</div>
+
+<div class="stat">
+<h2>12+</h2>
+<p>Technologies</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Cybersecurity</h3>
+<ul class="skill-list">
+<li>Network Security</li>
+<li>Vulnerability Assessment</li>
+<li>Security Auditing</li>
+<li>Risk Assessment</li>
+<li>Patch Management</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Programming</h3>
+<ul class="skill-list">
+<li>Python</li>
+<li>Java</li>
+<li>C</li>
+<li>JavaScript</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Machine Learning</h3>
+<ul class="skill-list">
+<li>Data Analysis</li>
+<li>Python for ML</li>
+<li>Cybersecurity ML Models</li>
+<li>Model Evaluation</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Tools</h3>
+<ul class="skill-list">
+<li>Nmap</li>
+<li>Wireshark</li>
+<li>GitHub</li>
+<li>VS Code</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Network Security Assessment</h3>
+<p>
+Performed vulnerability scanning and security assessment using Nmap and
+network analysis techniques.
+</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>
+Designed and developed a responsive personal portfolio website using
+HTML, CSS, and JavaScript.
+</p>
+</div>
+
+<div class="card">
+<h3>Student Management System</h3>
+<p>
+Developed a system to manage student records and academic information.
+</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity ML Project</h3>
+<p>
+Developed a machine learning based cybersecurity project for threat
+detection and analysis.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Cyber Security Intern - Oasis Infobyte</h3>
+<p>
+Completed a Cyber Security Internship focusing on vulnerability
+assessment, security auditing, patch management, risk analysis,
+and network security.
+</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity ML Model Developer Trainee</h3>
+<p>
+Currently undergoing training in Machine Learning and Cybersecurity,
+focusing on AI-driven threat detection and intelligent security systems.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATES -->
+
+<section id="certificates">
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Cyber Security Internship Certificate</h3>
+<p>Successfully completed Cyber Security Internship at Oasis Infobyte.</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity ML Model Developer Training</h3>
+<p>Specialized training in Machine Learning applications for Cybersecurity.</p>
+</div>
+
+<div class="card">
+<h3>Python Programming Certification</h3>
+<p>Learned Python programming and problem-solving fundamentals.</p>
+</div>
+
+<div class="card">
+<h3>Network Security Certification</h3>
+<p>Studied network fundamentals and security concepts.</p>
+</div>
+
+<div class="card">
+<h3>Web Development Certification</h3>
+<p>Built responsive websites using HTML, CSS, and JavaScript.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-box">
+
+<p style="margin-bottom:20px;">
+Interested in Cybersecurity, Machine Learning, and innovative technology projects.
+</p>
+
+<p>
+📧 Email:
+<a href="mailto:susithrabalu@gmail.com">
+susithrabalu@gmail.com
+</a>
+</p>
+
+<br>
+
+<p>
+💻 GitHub:
+<a href="https://github.com/susithrabalu-design" target="_blank">
+github.com/susithrabalu-design
+</a>
+</p>
+
+<br>
+
+<p>
+🔗 LinkedIn:
+<a href="https://www.linkedin.com/in/susithra-b-a9515a37a" target="_blank">
+linkedin.com/in/susithra-b-a9515a37a
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Susithra B | Cybersecurity & ML Portfolio
+</footer>
+
+</body>
+</html>
